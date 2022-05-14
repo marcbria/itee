@@ -100,6 +100,7 @@ class iteeThemePlugin extends ThemePlugin {
 		$this->modifyStyle('stylesheet',
 					array('addLess' => array('styles/variables.less',
 					'styles/reset.less',
+					'styles/layout.less',
 					'styles/mixins.less',
 					'styles/decoration.less',
 					'styles/typography.less')));
