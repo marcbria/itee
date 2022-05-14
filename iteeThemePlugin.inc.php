@@ -103,7 +103,8 @@ class iteeThemePlugin extends ThemePlugin {
 					'styles/layout.less',
 					'styles/mixins.less',
 					'styles/decoration.less',
-					'styles/typography.less')));
+					'styles/typography.less',
+					'styles/responsive.less')));
 
 
 /*

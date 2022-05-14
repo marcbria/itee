@@ -1,0 +1,124 @@
+// This LESS file will be parsed before the default stylesheet is compiled. Any
+// variables defined here will override those in the original stylesheet.
+//
+// You can also add additional CSS style rules if desired.
+
+/* Responsive */
+
+@media( max-width: @screen-desktop ) {
+	// Tablets or smaller (less than 992px)
+	// width: @screen-desktop;
+}
+
+@media( max-width: @screen-tablet ) {
+	// Tablets or smaller (less than 768px)
+	// width: @screen-tablet;
+
+	// Remove offset:
+	.offsetContent {
+		margin-top:	@quadruple;
+	}
+
+	.pkp_page_index {
+		.offsetContent {
+			margin-top:	@quadruple;
+		}
+	}
+
+	// Hiding owners
+	.headerTop__item {
+
+		&.owners {
+			justify-content: center;
+			display: none;
+		}
+	}
+
+	// Single column:
+	.section .cmp_article_list > li {
+	  flex: 1 0 100%;
+	  max-width: 100%;
+	}
+
+	.banner {
+		flex-wrap: wrap;
+	}
+
+	.headerShortcuts {
+		display: none;
+	}
+}
+
+@media( max-width: @screen-phone ) {
+	// Phones or smaller (less than 480px)
+	// width: @screen-phone;
+
+	.banner {
+		flex-direction: column;
+		.bannerIssue {
+			justify-content: flex-start;
+			.bannerIssue__title {
+				padding-top: @double;
+			}
+		}
+	}
+
+	// Top Image
+	.pkp_structure_head .pkp_head_wrapper .headerTop .pkp_site_name_wrapper {
+		.headerTop__item {
+			// Hiding user menu:
+			&.menuUser {
+				display: none;
+			}
+			&.journalLogo {
+				flex-basis: 86%;
+				.is_img {
+					background-color: contrast(@primary);
+					height: @quadruple;
+					background-position: @rhTopImg @rvTopImg;
+					background-size: @rsTopImg;
+				}
+			}
+		}
+	}
+
+	// Content
+	.pkp_structure_content {
+		padding: @base;
+
+		.page_index_journal {
+			margin: @base 0;
+		}
+		.pkp_block {
+			margin: @base 0;
+			padding: 0;
+		}
+		.announcement {
+			margin: 0 -@base;
+
+			h2 {
+				padding: 0 @base;
+			}
+		}
+		.obj_issue_toc {
+			.cover {
+				width: 50%;
+			}
+		}
+	}
+
+	//Temporary fix: ToBeRemoved if image is a background?
+	.pkp_structure_content.banner {
+		padding: 0;
+	}
+}
+
+@media( min-width: @screen-lg-desktop ) {
+	// Big desktops or bigger (bigger than 1200px)
+	// width: @screen-lg-desktop-container;
+}
+
+@media( min-width: @screen-desktop ) {
+	// Desktops or bigger (bigger than 992px)
+	// width: @screen-desktop-container;
+}
