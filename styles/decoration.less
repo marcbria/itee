@@ -28,12 +28,13 @@
 	border-left: 1px solid @primary;
 }
 
+
 // Header
+
 .pkp_structure_head {
 	background-color: white;
 	border-bottom: 1px solid transparent;
 }
-
 
 .pkp_site_name {
 	text-align: center;
@@ -42,18 +43,28 @@
 	}
 }
 
+
+
 // Menu
 .pkp_site_nav_menu {
 	background-color: white;
-}
 
-.pkp_site_nav_menu {
 	margin-top: 30px;
 
 	border-top: 1px solid #777777;
 	padding-top: 5px;
 	padding-bottom: 6px;
 	border-bottom: 1px solid #777777;
+
+	#navigationUserWrapper {
+		color: @color-line;
+		& > * a {
+			color: @color-line;
+		}
+		#iteeLangs {
+			line-height: 2rem;
+		}
+	}
 }
 
 .pkp_nav_list ul li a {
@@ -78,8 +89,27 @@
 	background-color: transparent;
 }
 
+/* Announcements */
 
-// Buttons
+.pkp_page_index {
+	.cmp_announcements > .obj_announcement_summary {
+		h3 {
+			border-top: 1px dotted #000;
+			padding-top: 2rem;
+		}
+		.summary {
+			border-bottom: 1px dotted #000;
+			padding-bottom: 2rem;
+		}
+	}
+	.more {
+		display: none;
+	}
+}
+
+
+
+/** Buttons **/
 
 // Hamburgesa
 

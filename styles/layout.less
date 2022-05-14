@@ -16,6 +16,7 @@
 .pkp_structure_sidebar {
 	margin-top: 2rem;
 }
+
 // Header
 
 #navigationUserWrapper {
@@ -25,13 +26,6 @@
 	justify-content: space-between;
 	white-space: nowrap;
 	z-index: 1000;
-	color: @color-line;
-	& > * a {
-		color: @color-line;
-	}
-	#iteeLangs {
-		line-height: 2rem;
-	}
 	.dropdown-menu {
 		top: @triple;
 	}
@@ -55,17 +49,6 @@ ul#languageNav,
 .pkp_page_index {
 	.cmp_announcements > .obj_announcement_summary {
 		width: 100%;
-		h3 {
-			border-top: 1px dotted #000;
-			padding-top: 2rem;
-		}
-		.summary {
-			border-bottom: 1px dotted #000;
-			padding-bottom: 2rem;
-		}
-	}
-	.more {
-		display: none;
 	}
 }
 
@@ -82,6 +65,8 @@ ul#languageNav,
 	}	
 }
 
+
+
 /* Article List */
 
 .cmp_article_list {
@@ -89,8 +74,10 @@ ul#languageNav,
   flex-wrap: wrap;
 }
 
+// 
 .cmp_article_list > li {
   flex: 1 0 100%;
+  max-width: 100%;
   box-sizing: border-box;
   padding-right: 10px;
 }
@@ -105,6 +92,12 @@ ul#languageNav,
 .obj_issue_toc .cover {
 	width: 18%;
 	margin-bottom: 0px;
+}
+
+// Galleys
+.obj_issue_toc .galleys {
+	padding-top: 0;
+	margin-top: 0;
 }
 
 // CONTENT OFFSET: As far as header is fixed.
