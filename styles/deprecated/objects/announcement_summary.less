@@ -1,0 +1,78 @@
+/**
+ * @file  plugins/themes/default/styles/objects/announcement_summary.less
+ *
+ * Copyright (c) 2022 Marc Bria Ramírez
+ * Copyright (c) 2014-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to the summary view of an announcement
+ * @link templates/frontend/objects/announcement_summary.tpl
+ */
+
+.section.announcement h2 {
+	font-family: @font-heading;
+	font-weight: @extra-bold;
+	font-size: @font-mili;
+	line-height: @font-mili;
+	color: black;
+
+	border-bottom: 1px solid @color-line;
+	margin-bottom: 0;
+}
+
+.obj_announcement_summary {
+
+	background-color: @color-bg-trama;
+	padding: @font-mili @font-mili;
+
+	h2,
+	h3,
+	h4 {
+		margin: 0;
+		font-family: @font-heading;
+		font-size: @font-bump;
+		line-height: @font-bump;
+		font-weight: @semi-bold;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.summary {
+		font-size: @font-sml;
+		line-height: @line-sml;
+		margin-top: 0;
+
+		p:first-child {
+			margin: 0;
+		}
+
+		p:last-child {
+			margin: 0;
+		}
+	}
+
+	.info {
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		align-items: baseline;
+
+		.date {
+			font-size: @font-sml;
+			line-height: @line-base-large;
+			color: @text-light;
+
+			&:before {
+				content: none;
+			}
+		}
+
+		.read_more {
+			.cmp_button_text(@fa-var-chevron-right);
+		}
+	}
+}

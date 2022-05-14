@@ -1,0 +1,112 @@
+// This LESS file will be parsed before the default stylesheet is compiled. Any
+// variables defined here will override those in the original stylesheet.
+//
+// You can also add additional CSS style rules if desired.
+
+/* Functions and mixins */
+
+// Drop shadow
+.box-shadow (@x: 0px, @y: 3px, @blur: 20px, @alpha: 0.3) {
+ -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+ -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+ box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+
+/* Calling:
+.cssClass {
+ .prefix-icon('\f059',red,24px);
+}
+*/
+
+// Adds a FontAwsome icon as a prefix
+.prefix-icon (@content: '\f059', @color: @primary, @font-size: @font-header) {
+	display: inline-block;
+	content: @content;			/* question mark */
+	color: @color;
+	font: normal normal normal @font-size/1 FontAwesome;
+	font-size: @font-size;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);
+	position: relative;
+	top: 0px;
+	right: 0;
+	width: @triple;
+	height: @triple;
+	line-height: @font-size + 2;
+	text-align: center;
+	vertical-align: middle;
+}
+
+// Adds a Academicons icon as a prefix
+.prefix-academicon (@content: '\e97e', @color: @primary, @font-size: @font-header) {
+	display: inline-block;
+	content: @content;			/* question mark */
+	color: @color;
+	font: normal normal normal @font-size/1 Academicons;
+	font-size: @font-size;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0, 0);
+	position: relative;
+	top: 0px;
+	right: 0;
+	width: @triple;
+	height: @triple;
+	line-height: @font-size;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/* Calling:
+.cssClass {
+	.prefix-icon('\f059',@primary,@font-nano);
+}
+*/
+
+// Crossbrowser opacity property
+.opacity (@opacity: 0.5) {
+	-webkit-opacity: 	@opacity;
+	-moz-opacity: 		@opacity;
+	opacity: 			@opacity;
+}
+
+/* Calling:
+.cssClass {
+	.allAnchors(@primary);
+}
+*/
+
+// Unify all anchor variants.
+.allAnchors(@color:@primary,@font-size:inherit,@text-transform:inherit,@font-weight:inherit) {
+	&,
+	&:active,
+	&:focus,
+	&:hover,
+	&:visited {
+		color: @color;
+		font-size: @font-size;
+		text-transform: @text-transform;
+		font-weight: @font-weight;
+	}
+}
+
+/* Calling:
+.cssClass {
+	.grayscaleTillHover();
+}
+*/
+
+// Crossbrowser image color conversion to grayscale.
+.grayscaleTillHover () {
+	& {
+		-webkit-filter: grayscale(1);
+		filter: grayscale(1);
+	}
+	&:hover {
+		-webkit-filter: grayscale(0);
+	    filter: grayscale(0);
+	}
+}

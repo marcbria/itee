@@ -1,0 +1,249 @@
+/**
+ * @file  plugins/themes/itee/styles/decoration.less
+ *
+ * Copyright (c) 2022 Marc Bria Ramírez
+ * Copyright (c) 2014-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying everywhere.
+ */
+
+/** Decorations **/
+
+// PreHeader
+#headerNavigationContainer {
+	background-image: url("http://estudisescenics.institutdelteatre.cat/plugins/themes/itee/img/bannerTop.jpg");
+	background-position: center top;
+	background-repeat: no-repeat;
+	padding-top: 80px;
+	background-size: contain;
+	text-align: center;
+}
+
+
+// Header
+.pkp_structure_head {
+	background-color: white;
+	border-bottom: 1px solid transparent;
+}
+
+
+.pkp_site_name {
+	text-align: center;
+	.is_img img {
+		max-height: 150px;
+	}
+}
+
+// Menu
+.pkp_site_nav_menu {
+	background-color: white;
+}
+
+.pkp_site_nav_menu {
+	margin-top: 30px;
+
+	border-top: 1px solid #777777;
+	padding-top: 5px;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #777777;
+}
+
+.pkp_nav_list ul li a {
+	border-radius: 0 !important;
+	margin: 0 !important;
+	border: 0 !important;
+	padding-left: 16px;
+	background-color: white;
+	border: 1px solid #777777 !important;
+	border-top: 0 !important;
+	border-bottom: 0 !important;
+}
+
+.pkp_nav_list ul {
+	box-shadow: none;
+	border-radius: 0 !important;
+	border-bottom: 1px solid #777777;
+}
+
+.pkp_site_nav_menu ul ul {
+	padding-top: 7px;
+	background-color: transparent;
+}
+
+
+// Buttons
+
+// Hamburgesa
+
+.pkp_site_nav_toggle {
+	background-color: red;
+}
+
+/*
+//Galleys (usually "PDF")
+.obj_galley_link {
+	font-size: @font-sml;
+	line-height: @double;
+	padding: 0 @base/2;
+
+	font-weight: @extra-bold;
+	background: @bg-base;
+	color: contrast(@primary);
+}
+
+// Responsive NavMenu
+.pkp_site_nav_toggle {
+	background-color: @primary;
+}
+
+.obj_issue_toc .sections:not(:first-child) {
+	margin-top: @font-giga;
+}
+
+.blockTitle,
+.pkp_block .title,
+.obj_issue_toc .section h2 {
+	border-bottom: 1px solid @color-line;
+	width: 100%;
+}
+*/
+
+/* Hero image */
+//
+// .itee-pastilla .row {
+//   overflow: hidden;
+//   background-color: #027970;
+//   margin-right:0;
+//   margin-left:0;
+//   margin: 0;
+//   padding: 0;
+// }
+//
+// .itee-pastilla {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+// }
+//
+// .itee-pastilla.header {
+//   padding: 0;
+// 	background-color: #027970;
+//   color: #FFF;
+// }
+//
+// .itee-pastilla .itee-box {
+// /*  flex-basis: 100%;*/
+// }
+//
+// .itee-pastilla .itee-box.itee-cover {
+// /*  flex: 1;*/
+//   padding: 0;
+// }
+//
+// .itee-pastilla .itee-box.itee-text {
+//   /* flex: 2; */
+//   /* min-height: 100px; */
+// }
+//
+
+
+
+//
+// .itee-pastilla .itee-left {
+//   width: 100%;
+//   /*height: 100%;*/
+// }
+//
+// .itee-pastilla .itee-vol-num {
+//   text-align: left;
+//   width: 45%;
+//   float:left;
+// }
+//
+// .itee-pastilla .itee-year {
+//   text-align: right;
+//   width: 45%;
+//   float: right;
+// }
+//
+
+//
+// .itee-pastilla .current-issue-number:before {
+//    content: none;
+// }
+//
+
+//
+//
+// .itee-pastilla .cover {
+//   max-height: 100%;
+//   max-width: 100%;
+//   object-fit: cover;
+//   /* Default image?
+//   background-image : url("https://revistes.uab.cat/ojs-jtl3/public/journals/5/cover_issue_87_en_US.jpg");
+//   background-size: cover;
+//   background-position: center;
+//   */
+// }
+//
+// .itee-pastilla .archive_issue_cover {
+//   max-width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+//   object-position: center;
+// }
+//
+// .itee-pastilla .itee-hover {
+// 	display: none;
+// 	position: absolute;
+// 	background-color: #027970;
+// 	top: 0;
+// 	left: 0;
+// 	padding: 0;
+// 	/* IE shit */
+// 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+// 	filter: alpha(opacity=90);
+// 	/* Modern browsers */
+// 	opacity: 0.9;
+// 	width: 100%;
+// 	height: 100%;
+// }
+//
+// .itee-pastilla .itee-box.itee-cover:hover .itee-hover,
+// .itee-pastilla .itee-box.itee-text:hover .itee-hover {
+// 	display: block;
+// }
+//
+// .itee-pastilla.header {
+// 	margin-top: 12rem;
+// }
+//
+// /* Description text */
+// .itee-pastilla .itee-hover p {
+// 	font-family: Barlow, Open Sans, Helvetica, Arial;
+// 	font-weight: 400;
+// 	font-size: 0.9rem;
+// 	text-transform: initial;
+// 	min-width: 100%;
+// 	line-height: 1.56rm;
+// 	letter-spacing: 0.2px;
+// 	text-align: justify;
+// }
+//
+// .itee-pastilla .itee-hover .description {
+// 	width: 100%;
+// 	/* padding: 1.5rem 3rem 1.5rem 1.5rem */
+// 	padding: 2rem;
+// 	margin: 0;
+// }
+//
+// .itee-pastilla .more_button {
+//   font-family: Barlow, Open Sans, Helvetica, Arial;
+//   color: #FFF;
+//   font-weight: 600;
+//   padding-top: 1em;
+//   display: block;
+//   text-align: right;
+// }

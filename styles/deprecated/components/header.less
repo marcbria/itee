@@ -1,0 +1,253 @@
+// This LESS file will be parsed before the default stylesheet is compiled. Any
+// variables defined here will override those in the original stylesheet.
+//
+// You can also add additional CSS style rules if desired.
+
+.pkp_navigation_primary_wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	.pkp_navigation_primary,
+	.headerShortcuts {
+		width: 100%;
+		li {
+			display: inline-block;
+
+			//Dropdown menus:
+			ul li {
+	    		display: block;
+			}
+
+		}
+	}
+	.headerShortcuts {
+		text-align: right;
+
+		a {
+			color: @color-icon !important;
+			text-decoration: none;
+			vertical-align: middle;
+		}
+
+		a::before {
+			.prefix-icon('\f059',@primary,@font-header);
+		}
+		.headerShortcuts__send::before {
+			content: "\f139";
+		}
+		.headerShortcuts__register::before {
+			content: "\f2bd";
+			font-size: @font-header - 3;
+		}
+	}
+}
+
+
+/** REGULAR HEADER **/
+
+.pkp_structure_head {
+	background-color: white;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 900;
+
+	&.reducedHeader {
+		background-color: white;
+
+		.pkp_head_wrapper {
+			.box-shadow(0px, 0px, 20px, 0.3);
+		}
+	}
+
+	.pkp_head_wrapper {
+		padding-top: 0;
+
+		//Header Top
+		.headerTop {
+			.pkp_site_name_wrapper {
+				display: flex;
+				flex-wrap: wrap-reverse;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: flex-start;
+
+				background-color: white;
+
+				.headerTop__item {
+					flex-basis:33%;
+
+					.is_img {
+						color: white;
+					}
+
+				}
+
+				.owners_logo {
+					height: 20px;
+				}
+
+				.pkp_navigation_user_wrapper {
+					position: relative;
+					padding-right: 0;
+
+					// Search icon
+					.userMenu__search::before {
+						.prefix-icon('\f002',@color-icon,@font-sml);
+						line-height: @font-header+4;
+					}
+				}
+			}
+		}
+
+
+		// Header NavMenu
+		.pkp_navigation_user {
+			margin-top: 0;
+
+			// ToDo MBR: This is a crap and need to be fixed...
+			// but something wired happens with this width.
+			&.pkp_nav_list {
+				li.profile {
+					ul.dropdown-menu {
+						width: auto !important;
+					}
+				}
+			}
+			.task_count {
+				padding: 0 0 0 2px;
+				background-color: @primary;
+				color: contrast(@primary);
+			}
+		}
+		.pkp_site_nav_menu {
+			background-color: white;
+			border-top: 1px solid @color-line;
+		}
+	}
+}
+
+
+
+/** BIG HEADER (home): **/
+
+.journalLogo.headerTop__item {
+	.is_img {
+		display: block;
+		height: @headerHeightSmall;
+
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		/* background-size: cover; */
+		background-position: top;
+	}
+}
+
+.pkp_page_index {
+	.journalLogo.headerTop__item {
+		.is_img {
+			height: @headerHeightBig;
+			transition: height 0.5s;
+		}
+		.reducedHeader {
+			height: @headerHeightSmall;
+		}
+	}
+}
+
+/** ITEE BANNER **/
+
+.banner {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	flex-basis: 33%;
+	background-color: @primary;
+
+	.bannerVisual {
+		flex-basis: 33%;
+		width: 100%;
+		height: @banner-height;
+		overflow: hidden;
+
+		.is_img {
+			display: inline-block;
+			height: 100%;
+			width: 100%;
+			background-size: cover;
+			background-position: 50% 50%;
+		}
+	}
+
+	.bannerIssue {
+		flex-basis: 66%;
+
+		font-family: @font-headingAlt;
+		font-weight: @regular;
+		text-transform: uppercase;
+		padding: 2rem;
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+
+		.bannerIssue__volNum,
+		.bannerIssue__year {
+			flex-basis: 50%;
+
+			font-weight: @extra-light;
+			font-size: @font-mega;
+			line-height: @font-mega;
+			color: white;
+			.opacity(0.8);
+		}
+
+		.bannerIssue__year {
+			font-size: @font-tera;
+			line-height: @font-tera - 10;
+			text-align: right;
+		}
+
+		.bannerIssue__volNum {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+		}
+
+		.bannerIssue__title {
+
+			color: white;
+			font-size: @font-giga;
+			line-height: @font-giga;
+			font-weight: @semi-bold;
+			text-align: right;
+
+			// .itee-pastilla .current-issue-year {
+			// 	font-size: 5.5rem;
+			// 	line-height: 4.1rem;
+			// }
+			//
+			// .itee-pastilla .issue-title {
+			// 	font-size: 3.2rem;
+			// 	font-weight: 500;
+			// 	text-align:  right;
+			// 	padding-top: 10rem;
+			// 	line-height: 94%;
+			// }
+
+		}
+	}
+
+	.bannerIssue.hover,
+	.bannerVisual.hover {
+		display: none;
+		position: absolute;
+		left: 33%;
+		background-color: red;
+		width: 67%;
+		z-index: 300;
+	}
+}

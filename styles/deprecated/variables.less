@@ -1,0 +1,94 @@
+// This LESS file will be parsed before the default stylesheet is compiled. Any
+// variables defined here will override those in the original stylesheet.
+//
+// You can also add additional CSS style rules if desired.
+
+// Make all border colors transparent
+// @bg-border-color: transparent;
+
+/** Variables **/
+
+// Reseting
+@bg-border-color:		transparent;
+
+// Colors
+// @primary:				lighten(@bg-base, 10%);
+@primary:				@bg-base;
+@color-title:			#525252;
+@color-line:			#9c9e9f;
+@color-icon: 			#525252;
+@color-bg-trama:		#ebebeb;
+
+// Header
+@headerHeightBig:		100px;
+@headerHeightSmall:		62px;
+@headerHeightSubtitle:  10px;
+
+// Banner height
+@banner-height: 40vh;
+
+// Layout
+@contentOffset:			50px;  // image-height
+
+// Responsiveness
+@rsTopImg:				300px;	// topImage size
+@rhTopImg:				center;	// Horizontal position
+@rvTopImg:				-10px;	// Vertical position
+
+// Article's Layout
+@widthLeft:				66%;
+@widthRight:			33%;
+
+@separator:				@triple;
+
+// Typography
+@font:					"Muli", "Arial", "Open Sans", sans-serif;
+@font-body:				"Merriweather", serif;
+@font-headingAlt:		"Barlow Semi Condensed", "ArialBlack", "Roboto", sans-serif;
+@font-heading:			@font;
+@font-site-title:		@font-heading;
+@font-body-article:		@font-body;
+
+//Size and lines
+@font-pico:              9px;
+@line-pico:              @base;
+@font-nano:              11px;
+@line-nano:              @base;
+@font-micro:             12px;
+@line-micro:             @base;
+@font-mili:              13px;
+@line-mili:              @double;
+@font-sml:               14px;
+@line-sml:               @double;
+@font-base:              15px;
+@line-base:              @double;
+@line-base-large:        @line-base + 5; // large blocks of text
+@font-bump:              16px;
+@line-bump:              @double;
+@font-lead:              18px;
+@line-lead-compress:     22px;
+@line-lead:              @triple;
+@font-header:            24px;
+@line-header:            @triple;
+@font-kilo:				34px;
+@line-kilo:				@triple;
+@font-mega:				38px;
+@line-mega:				@triple;
+@font-giga:				43px;
+@line-giga:				@triple;
+@font-tera:				65px;
+@line-tera:				@triple;
+
+// Font weights
+@extra-light:			200;
+@light:					300;
+@regular:				400;
+@medium:				500;
+@semi-bold:				600;
+@extra-bold:			700;
+@black:					800;
+
+//Others:
+@letter-spacing:		2px;
+@letter-spacing-small: 1.5px;
+@colorOpacity:			80%;

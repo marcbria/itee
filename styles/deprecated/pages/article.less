@@ -1,0 +1,268 @@
+/**
+ * @file  plugins/themes/default/styles/pages/indexJournal.less
+ *
+ * Copyright (c) 2022 Marc Bria Ramírez
+ * Copyright (c) 2014-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to the article's summary page.
+ * @link templates/frontend/pages/article.tpl
+ */
+
+ /** Article's page **/
+
+ .pkp_page_article {
+
+ 	.pkp_structure_main:first-child:last-child {
+ 		margin-top: 0 !important;
+ 	}
+
+ 	.pkp_structure_main {
+ 		margin-top: 0;
+ 		width: auto;
+
+		/* Recommended article's plugin won't be much used and the html of
+		the plugin is not great, but... just in case */
+		#articlesBySameAuthorList {
+			padding-bottom: @triple;
+
+			h3 {
+				padding: 0;
+				margin: 0;
+
+				font-size: @font-bump;
+				font-weight: @bold;
+				line-height: @font-bump;
+				text-transform: uppercase;
+				letter-spacing: @letter-spacing;
+				color: @color-title;
+
+				padding-bottom: @base/2;
+			}
+			ul {
+				font-family: @font-body-article;
+				font-size: @font-sml;
+				line-height: @line-sml;
+				list-style-type: none;
+				padding-left: 0;
+			}
+		}
+ 	}
+ 	.obj_article_details {
+
+		// Top padding:
+		.row {
+    		margin-top: @separator;
+		}
+
+ 		// Both sides:
+ 		.item {
+ 			padding: 0 @triple @quadruple @triple;
+
+ 			h2,h3 {
+ 				font-size: @font-bump;
+ 				font-weight: @bold;
+ 				line-height: @font-bump;
+ 				text-transform: uppercase;
+				letter-spacing: @letter-spacing;
+				color: @color-title;
+
+				padding-bottom: @base/2;
+ 			}
+ 		}
+
+ 		// Content side:
+ 		.main_entry {
+ 			width: @widthLeft;
+
+ 			.page_title {
+ 				font-size: @font-kilo;
+ 				font-weight: @black;
+ 				line-height: @quadruple;
+ 				text-transform: uppercase;
+				letter-spacing: @letter-spacing;
+				color: @color-title;
+
+ 				padding: 0px @separator @separator @separator;
+ 				margin: 0;
+ 			}
+
+ 			ul.authors {
+ 				display: inline;
+
+ 				li {
+ 					display:inline;
+ 					&::after {
+ 						content: "|";
+						padding: 0 @base/2;
+						font-size: @font-lead;
+ 					}
+ 					&:last-child::after {
+ 						content: "";
+ 					}
+ 				}
+ 				.name {
+ 					display: inline;
+
+ 					color: @primary;
+ 					font-size: @font-bump;
+ 					font-weight: @semi-bold;
+ 					text-transform: uppercase;
+ 				}
+ 				.affiliation {
+ 					display: none;
+ 				}
+ 				.orcid {
+ 					display: inline;
+
+ 					a {
+ 						visibility: hidden;
+ 						width: @double;
+						height: @double;
+ 						display: inline-block;
+ 						vertical-align: text-bottom;
+						color: white;
+ 					}
+ 					a::before {
+ 						/* .prefix-icon('\f8d2',@primary,@font-header); */
+						/* .prefix-icon('\f059',@primary,@font-header); */
+						.prefix-academicon('\e9d9',@primary,@font-lead);
+						color: @color-line;
+ 						visibility: visible;
+ 						display: inline;
+
+ 					}
+ 				}
+ 			}
+
+			.obj_galley_link {
+				font-size: @font-sml;
+				line-height: @triple;
+				padding: 0 @base;
+
+				font-weight: @extra-bold;
+				background: @bg-base;
+				color: contrast(@primary);
+			}
+
+ 			.item {
+
+				.label {
+					margin: 0 0 @double 0;
+					padding: 0;
+				}
+
+				p,
+				&.keywords,
+ 				&.abstract {
+ 					font-family: @font-body-article;
+					font-size: @font-sml;
+					line-height: @line-sml;
+ 				}
+
+				p {
+					margin: 0;
+					padding-right: @double;
+				}
+
+ 				&.keywords h2 {
+ 					display: block;
+ 				}
+
+				&.references,
+				&.author_bios {
+					.value {
+						max-height: 40vh;
+						overflow-y: auto;
+						scrollbar-width: thin;
+						.sub_item {
+							margin-bottom: @base;
+						}
+					}
+				}
+
+				&.author_bios {
+					h3.label {
+						font-weight: @medium;
+						color: @primary;
+						margin-bottom: 0;
+					}
+				}
+ 			}
+ 		}
+
+ 		// Sidebar:
+ 		.entry_details {
+ 			width: @widthRight;
+
+			.item {
+				padding-bottom: @triple;
+
+				p,
+				.value {
+					font-size: @font-mili;
+					line-height: @double;
+				}
+
+				h2,
+				h3 {
+					font-size: @font-nano;
+				    text-transform: uppercase;
+				    font-weight: @black;
+				    letter-spacing: @letter-spacing;
+				    color: @color-icon;
+				    text-decoration: none;
+					margin-bottom: @base;
+					border-bottom: 1px solid @color-line;
+				}
+				&.cover_image {
+					padding-bottom: 0;
+
+	 				img {
+	 					width: 50%;
+						padding-bottom: @triple;
+	 				}
+	 			}
+				&.doi {
+	 				.label {
+	 					display: block;
+	 				}
+	 			}
+	 			&.citation {
+					.citation_display {
+						#citationOutput {
+							font-size: @font-nano;
+							line-height: @font-bump;
+						}
+		 				.citation_formats {
+		 					border: 0;
+		 					background-color: #F4F4F4;
+
+							.citation_formats_button {
+								font-size: @font-nano;
+							}
+		 				}
+					}
+	 			}
+				&.downloads_chart {
+					.value {
+						padding-top: @base;
+					}
+				}
+				&.copyright {
+					p {
+						margin:0;
+						padding:0 0 @base 0;
+					}
+				}
+				&.addthis {
+					.grayscaleTillHover();
+					.addthis_counter {
+						padding-left: @base;
+					}
+				}
+			}
+ 		}
+ 	}
+ }

@@ -1,0 +1,75 @@
+// This LESS file will be parsed before the default stylesheet is compiled. Any
+// variables defined here will override those in the original stylesheet.
+//
+// You can also add additional CSS style rules if desired.
+
+/** Layout **/
+
+// Desktop
+.pkp_structure_content {
+	padding: 0;
+	.pkp_structure_main {
+		padding: 0;
+	}
+}
+
+#navigationUserWrapper {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	white-space: nowrap;
+	.dropdown-menu {
+		top: @triple;
+	}
+}
+
+
+#navigationUser,
+ul#languageNav,
+#languageNav ul {
+	width: auto;
+	white-space: nowrap;
+	justify-content: flex-end;
+	white-space: nowrap;
+}
+
+/* Article List */
+
+.cmp_article_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cmp_article_list > li {
+  flex: 1 0 50%;
+  box-sizing: border-box;
+  padding-right: 10px;
+  max-width: 50%;
+}
+
+// But... REVIEWS is always single column.
+.section:last-child .cmp_article_list > li {
+  flex: 1 0 100%;
+  max-width: 100%;
+}
+
+// Cover space
+.obj_issue_toc .cover {
+	width: 18%;
+	margin-bottom: 0px;
+}
+
+// CONTENT OFFSET: As far as header is fixed.
+
+.offsetContent {
+	margin-top:	@contentOffset+@headerHeightSmall;
+}
+
+.pkp_page_index {
+	.offsetContent {
+		margin-top:	@contentOffset+@headerHeightBig;
+	}
+}
+
+// Article's summary layout is in pages/article.less

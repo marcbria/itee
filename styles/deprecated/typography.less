@@ -1,0 +1,103 @@
+/**
+ * @file  plugins/themes/itee/styles/typography.less
+ *
+ * Copyright (c) 2022 Marc Bria Ramírez
+ * Copyright (c) 2014-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @brief Global styles about .
+ */
+
+/** Typography **/
+
+.pkp_structure_main {
+	h2 {
+		font-family: @font-headingAlt;
+	}
+	.section h2 {
+		font-family: @font;
+		text-transform: uppercase;
+		font-weight: @regular;
+	    color: rgba(0,0,0,0.9);
+		color: @primary;
+
+		letter-spacing: @letter-spacing;
+	}
+}
+
+.obj_article_summary {
+	.title {
+		font-family: @font-body;
+	}
+	.meta .authors {
+		text-transform: uppercase;
+		font-size: @font-nano;
+		color: #7b7979;
+	}
+}
+
+.pkp_block {
+
+	padding-right: 0;
+
+	.title,
+	.blockTitle {
+		font-family: @font;
+		text-transform: uppercase;
+		font-size: @font-mili;
+		font-weight: @extra-bold;
+		color: rgba(0,0,0,0.8);
+
+		letter-spacing: @letter-spacing;
+	}
+}
+
+
+/** Links **/
+
+.obj_article_summary > .title a {
+	color: #444444;
+	font-weight: @regular;
+	font-size: @font-lead;
+	line-height: @line-lead-compress;
+}
+
+.pkp_head_wrapper {
+	a,
+	li > a {
+		&,
+		&:active,
+		&:hover,
+		&:visited {
+			color: @primary;
+			font-size: @font-nano;
+			text-transform: uppercase;
+			font-weight: @black;
+
+			letter-spacing: @letter-spacing;
+		}
+	}
+	.dropdown-menu {
+		li > a {
+			&,
+			&:active,
+			&:hover,
+			&:visited {
+				font-weight: @regular;
+				letter-spacing: @letter-spacing-small;
+			}
+		}
+	}
+}
+
+.pkp_site_nav_menu a,
+.pkp_navigation_user > li > a,
+.pkp_navigation_user > li.in_focus > a {
+	color: @primary;
+}
+
+// Mouse Hovers
+.obj_article_summary > .title a:hover {
+	color: @primary;
+}

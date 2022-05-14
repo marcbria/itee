@@ -1,0 +1,49 @@
+// Sidebars
+//
+// This uses class names and HTML provided by OJS
+
+.pkp_structure_sidebar {
+	&.left {
+		.block_custom {
+			.publishers {
+				ul {
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: row;
+					align-items: center;
+				    justify-content: center;
+					.show {
+						flex-basis: 50%;
+						.grayscaleTillHover();
+					}
+				}
+			}
+			.indexada {
+				ul {
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: row;
+					align-items: center;
+				    justify-content: center;
+					.show {
+						flex-basis: 100%;
+						.grayscaleTillHover();
+					}
+				}
+			}
+		}
+		.block_web_feed {
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				li {
+					flex-basis: 33%;
+					.grayscaleTillHover();
+				}
+			}
+		}
+	}
+}
