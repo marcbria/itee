@@ -9,6 +9,8 @@
 	// Tablets or smaller (less than 992px)
 	// width: @screen-desktop;
 
+	// Banner
+
 	#headerNavigationContainer {
 		background-position: right top;
 		padding-top: 80px;
@@ -20,15 +22,57 @@
 	/** Buttons **/
 
 	// Hamburgesa
-
 	.pkp_site_name_wrapper {
 		height: @rsTopImg;
 		.pkp_site_nav_toggle {
 			background-color: @color-line;
-			position: fixed;
-			top: 0;
+			position: absolute;
+			top: -80px;
 			left: 0;
 		}
+	}
+
+
+	// Menu
+
+	// Remove any border:
+	.pkp_nav_list ul,
+	.pkp_nav_list ul li,
+	.pkp_nav_list ul li a  {
+		border: 0 !important;
+	}
+
+	.pkp_site_nav_menu {
+		margin: @double 0 0 0;
+		padding: @double 0 0 0;
+
+		// Makeup login and langs
+		#navigationUserWrapper {
+			flex-direction: column-reverse;
+			background-color: white;
+			border-bottom: 1px solid @color-line;
+			padding-bottom: @double;
+			margin-top: auto;
+
+			& > * a {
+				color: black;
+			}
+
+			#navigationUser {
+				padding-top:0;
+			}
+		}
+	}
+
+	// Regions
+
+	// Remove lines
+	.pkp_structure_sidebar {
+		border-left: none;
+	}
+
+	.pkp_block {
+		padding-right: @double;
 	}
 }
 
