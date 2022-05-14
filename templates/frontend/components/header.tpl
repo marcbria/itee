@@ -77,6 +77,11 @@
 						</div>
 					</div>
 					<div class="pkp_navigation_user_wrapper" id="navigationUserWrapper">
+						<div class="itee_langs_list" id="iteeLangs">
+							<a href="{$baseUrl}/ees/user/setLocale/ca_ES">CAT</a>|
+							<a href="{$baseUrl}/ees/user/setLocale/es_ES">ESP</a>|
+							<a href="{$baseUrl}/ees/user/setLocale/en_US">ENG</a>
+						</div>
 						{load_menu name="user" id="navigationUser" ulClass="pkp_navigation_user" liClass="profile"}
 
 					{* Search form *}
