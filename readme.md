@@ -1,4 +1,4 @@
-# ReDi Theme for OJS 3.2 or greater
+# ITEE Theme for OJS 3.2 or greater
 
 ITEE is a coorporative theme build as a child theme for the default theme in OJS 3+.
 
